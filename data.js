@@ -7,13 +7,18 @@ export const images={
     'companyLogo2':'https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2FMSE%20FILM%20Logo%20secondary-color.png?alt=media&token=90d8937f-2085-4711-9abd-7dd8f8dd6102',
 
   }
-export const companyName='AMP'
+export const companyName='MSE Films'
 
 
 export const whatsappNo='+916264871687'
 
 export const aboutUs=''
 export const ourStory=''
+
+export const domainURL='https://film.mehtabedhan.com/'
+
+
+export const homePageKeywords='MSE films,film production,gwalior video production,madhya pradesh video production,mp video production,gwalior drone'
 
 
 export const landingPageTitle=

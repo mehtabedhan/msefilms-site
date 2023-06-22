@@ -1,4 +1,4 @@
-import { images,landingPageTitle,landingPageDescription } from '../data'
+import { images,landingPageTitle,landingPageDescription, homePageKeywords, domainURL, companyName } from '../data'
 import Link from 'next/link'
 import Image from 'next/image';
 
@@ -7,7 +7,28 @@ const LandingSection = () => {
   return (
    
     <section className="">
-    
+
+`   <Head>
+        <title>{companyName}</title>
+        
+        <meta charset="UTF-8"/>
+
+        <meta
+          name="description"
+          content={landingPageTitle+" "+ landingPageDescription}
+          key="desc"
+        />
+        <meta name="keywords"
+         content={homePageKeywords}
+         />
+
+        <link
+          rel="canonical"
+          href={domainURL}
+          key="canonical"
+        />
+       </Head>
+
 
         <div className="grid py-2 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="place-self-center mr-auto lg:col-span-7">
