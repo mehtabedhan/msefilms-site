@@ -26,7 +26,7 @@ const Videos = () => {
         {videos.map((item)=>{
             return(
               
-       <ReactPlayer width='480px' url={item}/>
+       <ReactPlayer key={item} width='480px' url={item}/>
             )
         }
         )}
