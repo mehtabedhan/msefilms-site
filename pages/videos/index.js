@@ -49,6 +49,8 @@ return indexList
               setSearchText(e.target.value)
             }} 
             className="text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-500 text-textColor" />
+            
+            
              <button
              onClick={()=>{
               
