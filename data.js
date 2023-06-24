@@ -1,12 +1,12 @@
 export const images={
     'aboutImage':`https://pbblogassets.s3.amazonaws.com/uploads/2015/11/Cinematography-Manual.jpg`,
     'landingPage':'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'companyLogo3':'https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2FAMP%20Studios%20Logo%20primary-color.png?alt=media&token=871a44df-ea7b-48aa-ba0f-5e07bf849e65',
-    'companyLogo4':'https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2FAMP%20Studios%20Logo%20secondary-color.png?alt=media&token=cd31c791-6e4b-46fd-9f78-f83ad4b759ee',
-    'companyLogo1':'https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2FMSE%20Film%20Logo%20primary-color.png?alt=media&token=4afbc42f-6517-414b-a306-8eb811393ba7',
-    'companyLogo2':'https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2FMSE%20FILM%20Logo%20secondary-color.png?alt=media&token=90d8937f-2085-4711-9abd-7dd8f8dd6102',
+    'companyLogo1':'https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2FMSE%20Films%20Logo%20secondary-color.png?alt=media&token=7b0f5cb7-808d-490d-abeb-82ecf3a30821',
+    'companyLogo2':'https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2FMSE%20FILM%20Logo%20secondary-color.png?alt=media&token=0ed40f56-2d02-4f5a-b489-91703c40b8a4',
 
   }
+
+
 export const companyName='MSE Films'
 
 
@@ -29,7 +29,7 @@ export const landingPageDescription=
 
 export const socials=[
     {
-        'name':'Instagram','url':'https://www.instagram.com/ampstudios.films'
+        'name':'Instagram','url':'https://www.instagram.com/filmsbymehtab'
     },
     {
         'name':'Youtube','url':'https://www.youtube.com/@ampstudiosfilms'
@@ -48,22 +48,21 @@ export const categories=[
       id:1,
       name:'Video / Photo Production',
       urlParamName:'video-photo',
-      coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2Fphoto-video.png?alt=media&token=e1a6f6ba-9ce7-4796-bba2-b1590af9ad85"
+      coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Fphoto-video.png?alt=media&token=5658df89-89db-4726-8931-1ab1e2e41f06"
     },
     
-  
     {
       id:2,
       name:'Editing & VFX',
       urlParamName:'editing-vfx',
-      coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2Fediting.jpg?alt=media&token=86c556c9-294a-466d-a5d3-ec71dda631e6"
+      coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Fediting.jpg?alt=media&token=8b8d9632-d898-4a28-bb5c-31a3745aced3"
 
     },
     {
       id:3,
       name:'Film Production',
       urlParamName:'film-production',
-      coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/amp-studio-1a31a.appspot.com/o/images%2Ffilmproduction.jpg?alt=media&token=a74a287b-7d0f-4082-a8c8-935e6d834dd4"
+      coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Ffilmproduction.jpg?alt=media&token=7bd2988f-8cb0-4317-8c1d-aabfa3029fee"
 
     },
  

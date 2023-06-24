@@ -5,13 +5,13 @@ import {getStorage} from 'firebase/storage'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAmo7BBs98RyhLiOPitZ-5UzwhEPjuNrXg",
-  authDomain: "amp-studio-1a31a.firebaseapp.com",
-  projectId: "amp-studio-1a31a",
-  storageBucket: "amp-studio-1a31a.appspot.com",
-  messagingSenderId: "39140013802",
-  appId: "1:39140013802:web:fc562ffdda16319512c993",
-  measurementId: "G-7H2KKN0Y6K"
+    apiKey: "AIzaSyCkLq3MP-sw1-841KRKY05MSfDd9xKKiaQ",
+    authDomain: "mse-films.firebaseapp.com",
+    projectId: "mse-films",
+    storageBucket: "mse-films.appspot.com",
+    messagingSenderId: "182657575580",
+    appId: "1:182657575580:web:5ffdcffaf7fd6139b95b59",
+    measurementId: "G-V7NCJBQ9EE"
 };
 
 

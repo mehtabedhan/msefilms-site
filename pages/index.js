@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import LocationsSection from '../components/ProjectsSection';
 
 export default function Home() {
+  
   return (
     <div className="">
 

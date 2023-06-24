@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getCollectionData } from '../../utils/apiFunctions'
+import { v } from '../../data'
+import ReactPlayer from 'react-player'
 
 const Videos = () => {
     const [videos, setVideos] = useState([])
@@ -11,6 +13,8 @@ const Videos = () => {
       getCollectionData('videos').then((val)=>{
         setVideos(val)
       })
+     
+
   }, [])
 
 
@@ -22,11 +26,10 @@ const Videos = () => {
         {videos.map((item)=>{
             return(
               
-              <div key={item.id} className="aspect-w-16 aspect-h-9">
-              <iframe src={"https://www.youtube.com/embed/"+item.link.split('=')[1]+"?start="+item.startAt} allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
+       <ReactPlayer width='480px' url={item}/>
             )
-        })}
+        }
+        )}
    
 
         

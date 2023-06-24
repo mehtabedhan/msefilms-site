@@ -1,8 +1,15 @@
-import { images,landingPageTitle,landingPageDescription, homePageKeywords, domainURL, companyName } from '../data'
+import { images,landingPageTitle,landingPageDescription, homePageKeywords, domainURL, companyName, packages } from '../data'
 import Link from 'next/link'
 import Image from 'next/image';
+import Head from 'next/head';
+import { useEffect } from 'react';
+import { doc, setDoc } from 'firebase/firestore';
+import { firestore } from '../firebase.config';
 
 const LandingSection = () => {
+
+
+  
 
   return (
    
@@ -11,7 +18,7 @@ const LandingSection = () => {
 `   <Head>
         <title>{companyName}</title>
         
-        <meta charset="UTF-8"/>
+        <meta charSet="UTF-8"/>
 
         <meta
           name="description"
