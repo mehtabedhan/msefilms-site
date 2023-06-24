@@ -27,18 +27,25 @@ export const landingPageDescription=
 `We turn your moments into beautiful Handcrafted Films, including
  Pre-Wedding Shoots, Music Videos and more`
 
-export const socials=[
-    {
-        'name':'Instagram','url':'https://www.instagram.com/filmsbymehtab'
-    },
-    {
-        'name':'Youtube','url':'https://www.youtube.com/@ampstudiosfilms'
-    },
-    {
-        'name':'Facebook','url':'https://www.facebook.com/ampstudios.films'
-    },
-  
+
+
+
+
+ export const socials=[
+  {
+      'name':'Instagram','url':'https://www.instagram.com/filmsbymehtab'
+  },
+  {
+      'name':'Youtube','url':'https://www.youtube.com/@filmsbymehtab'
+  },
+  {
+      'name':'Facebook','url':'https://www.facebook.com/filmsbymehtab'
+  },
+
 ]
+
+
+
 
 export const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
@@ -63,6 +70,29 @@ export const categories=[
       name:'Film Production',
       urlParamName:'film-production',
       coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Ffilmproduction.jpg?alt=media&token=7bd2988f-8cb0-4317-8c1d-aabfa3029fee"
+
+    },
+ 
+  ]
+
+
+  export const videoCategories=[
+    {
+      id:1,
+      name:'Time Lapse',
+      urlParamName:'time-lapse',
+    },
+    
+    {
+      id:2,
+      name:'Nature',
+      urlParamName:'nature',
+
+    },
+    {
+      id:3,
+      name:'People',
+      urlParamName:'people',
 
     },
  

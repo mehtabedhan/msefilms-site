@@ -1,10 +1,10 @@
 import React from 'react'
 import { AddProject } from '../../../components'
 
-const AdminLocation = () => {
+const AdminProject = () => {
   return (
     <div><AddProject/></div>
   )
 }
 
-export default AdminLocation
+export default AdminProject
