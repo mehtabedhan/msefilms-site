@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { Loader, filmsByCategorySection } from '../../components';
-import VideoPlayer from '../../components/VideoPlayer';
 import { getCollectionData, getDataById } from '../../utils/apiFunctions';
 import Head from 'next/head';
 
@@ -63,10 +62,10 @@ const FilmDetails = ({film}) => {
 
             {isReleased?(
               <>
-              {film.filmURLType==='youtube'?(<div key={film.id} className="aspect-w-16 aspect-h-9 ">
+             <div key={film.id} className="aspect-w-16 aspect-h-9 ">
                     <iframe src={"https://www.youtube.com/embed/"+film.filmURL.split('=')[1]} allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                   </div>
-                  ):(<VideoPlayer link={film.filmURL}/>)}
+                  
               </>
             
                   
