@@ -76,6 +76,28 @@ export const categories=[
   ]
 
 
+  
+export const filmCategories=[
+  {
+    id:1,
+    name:'Short Film',
+    urlParamName:'short-film',
+  },
+  
+
+  {
+    id:2,
+    name:'Web Series',
+    urlParamName:'web-series',
+  },
+  {
+    id:3,
+    name:'Feature Film',
+    urlParamName:'feature-film',
+  },
+
+]
+
   export const videoCategories=[
     {
       id:1,
@@ -104,10 +126,8 @@ export const categories=[
 
 
 
-export const aboutUsText='It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from'
-export const ourStoryText='It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from'
-
-
+export const aboutUsText=`We provide Video Production Solutions to tell your Stories or boost your Business`
+export const ourStoryText=``
 export const navData=[
   {
       "id":1,

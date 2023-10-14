@@ -1,6 +1,5 @@
 import { LandingSection, PackagesSection, PackageTypesSection, ProjectsSection,} from '../components';
 import Footer from '../components/Footer';
-import LocationsSection from '../components/ProjectsSection';
 
 export default function Home() {
   
@@ -9,9 +8,9 @@ export default function Home() {
 
       
       <LandingSection/>
+      <ProjectsSection/>
       <PackageTypesSection/>
       <PackagesSection/>
-      <ProjectsSection/>
    
 
       <Footer/>

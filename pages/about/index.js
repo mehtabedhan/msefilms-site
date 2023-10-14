@@ -27,7 +27,7 @@ const About = () => {
              <Image width='400' height='400' alt='about' className="first-letter:rounded-md shadow-lg shadow-gray-600" src={images['aboutImage']} />
         </div>
     </div>
-
+{/* 
     <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
         <div className="w-full lg:w-5/12 flex flex-col justify-center">
             <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-text-secondary pb-4">Our Story</h1>
@@ -56,7 +56,7 @@ const About = () => {
                 }
             </div>
         </div>
-    </div>
+    </div> */}
 </div>
 
   )

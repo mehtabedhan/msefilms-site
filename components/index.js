@@ -17,6 +17,8 @@ export {default as AddPackage} from './AddPackage.jsx'
 export {default as AddProject} from './AddProject.jsx'
 
 export {default as AddVideo} from './AddVideo.jsx'
+export {default as AddFilm} from './AddFilm.jsx'
+
 
 
 
