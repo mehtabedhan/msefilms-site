@@ -1,13 +1,13 @@
 export const images={
     'aboutImage':`https://pbblogassets.s3.amazonaws.com/uploads/2015/11/Cinematography-Manual.jpg`,
     'landingPage':'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'companyLogo1':'https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2FMSE%20Films%20Logo%20secondary-color.png?alt=media&token=7b0f5cb7-808d-490d-abeb-82ecf3a30821',
-    'companyLogo2':'https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2FMSE%20FILM%20Logo%20secondary-color.png?alt=media&token=0ed40f56-2d02-4f5a-b489-91703c40b8a4',
+    'companyLogo1':'https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Fmkm%2Fmkm%20Films%20Logo%20secondary-color.png?alt=media&token=0b148694-9f91-438c-ad25-a85d1f6345fe',
+    'companyLogo2':'https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Fmkm%2Fmkm%20Films%20Logo%20primary-color.png?alt=media&token=fa8d3e73-ca73-40dd-bf6d-2a43ee3dc502',
 
   }
 
 
-export const companyName='MSE Films'
+export const companyName='MKM Films'
 
 
 export const whatsappNo='+916264871687'
@@ -18,7 +18,7 @@ export const ourStory=''
 export const domainURL='https://film.mehtabedhan.com/'
 
 
-export const homePageKeywords='MSE films,film production,gwalior video production,madhya pradesh video production,mp video production,gwalior drone'
+export const homePageKeywords='MKM films,film production,gwalior video production,madhya pradesh video production,mp video production,gwalior drone'
 
 
 export const landingPageTitle=
@@ -53,8 +53,8 @@ export const monthNames = ["January", "February", "March", "April", "May", "June
 export const categories=[
     {
       id:1,
-      name:'Video / Photo Production',
-      urlParamName:'video-photo',
+      name:'Video Production',
+      urlParamName:'video',
       coverPhotoURL:"https://firebasestorage.googleapis.com/v0/b/mse-films.appspot.com/o/images%2Fphoto-video.png?alt=media&token=5658df89-89db-4726-8931-1ab1e2e41f06"
     },
     
@@ -129,17 +129,20 @@ export const filmCategories=[
 export const aboutUsText=`We provide Video Production Solutions to tell your Stories or boost your Business`
 export const ourStoryText=``
 export const navData=[
-  {
-      "id":1,
-      "title":'Packages',
-      "link":'packages'
 
-  
-  },
   {
+    "id":1,
+    "title":'Films',
+    "link":'videos'
+
+
+},
+
+  {
+    
     "id":2,
-    "title":'Films / Projects',
-    "link":'projects'
+    "title":'Packages',
+    "link":'packages'
 
 
 },

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { getFeaturedData } from '../utils/apiFunctions'
+import { getDataByCategory, getFeaturedData, getVideosByPackage } from '../utils/apiFunctions'
 
-const FeaturedVideosSection = () => {
+const VideosByPackage = ({pkg}) => {
   const [videos, setVideos] = useState([])
 
   useEffect(() => {
   
       
-    getFeaturedData('videos').then((val)=>{
+getVideosByPackage(pkg).then((val)=>{
       setVideos(val)
-      console.log(val)
     })
+
 }, [])
 
 
@@ -18,7 +18,7 @@ const FeaturedVideosSection = () => {
     <section className="">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <h2 className="mb-8 text-2xl font-normal leading-tight text-center text-text-secondary lg:mb-16 md:text-4xl">
-              our recent Work
+              Related Work ...
                 </h2>
             {videos.length!=0?(
               <div className="grid grid-cols-2 gap-4 text-text-primary sm:gap-12 md:grid-cols-3 lg:grid-cols-3">
@@ -45,4 +45,4 @@ const FeaturedVideosSection = () => {
   )
 }
 
-export default FeaturedVideosSection
+export default VideosByPackage

@@ -11,6 +11,8 @@ export {default as ProjectsByCategorySection} from './ProjectsByCategorySection'
 
 export {default as PackagesSection} from './PackagesSection'
 export {default as PackageTypesSection} from './PackageTypesSection'
+export {default as VideosByPackage} from './VideosByPackage'
+
 export {default as FeatuedVideosSection} from './FeaturedVideosSection'
 
 export {default as AddPackage} from './AddPackage.jsx'

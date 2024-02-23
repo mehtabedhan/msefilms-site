@@ -1,4 +1,4 @@
-import { LandingSection, PackagesSection, PackageTypesSection, ProjectsSection,} from '../components';
+import { FeatuedVideosSection, LandingSection, PackagesSection, PackageTypesSection, ProjectsSection,} from '../components';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -8,8 +8,8 @@ export default function Home() {
 
       
       <LandingSection/>
-      <ProjectsSection/>
-      <PackageTypesSection/>
+      <FeatuedVideosSection/>
+      {/* <PackageTypesSection/> */}
       <PackagesSection/>
    
 

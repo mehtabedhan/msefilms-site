@@ -1,5 +1,6 @@
 import { collection, doc, getDocs, where, query, setDoc, limit } from "firebase/firestore"
 import { firestore } from "../firebase.config"
+import { PackageTypesSection } from "../components";
 
 
 
@@ -26,6 +27,27 @@ export const getDataByCategory=async(category,name)=>{
     
 
 }
+
+
+
+export const getVideosByPackage=async(pkg)=>{
+
+
+    const items=await getDocs(
+
+        query(collection(firestore,'videos'),where('package','==',pkg)
+        )
+        
+    )
+    const data=items.docs.map((doc)=>doc.data())
+
+    return data
+
+
+    
+
+}
+
 export const getProjectsByPackage=async(pck)=>{
 
 

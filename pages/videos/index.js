@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { getCollectionData } from '../../utils/apiFunctions'
 import ReactPlayer from 'react-player'
 import { MdSearch } from 'react-icons/md'
+import { categories } from '../../data'
 
 const Videos = () => {
   const [videos, setVideos] = useState([])
-  const [searchText, setSearchText] = useState('')
   const [filteredVideos, setFilteredVideos] = useState([])
   
   useEffect(() => {
@@ -15,71 +15,39 @@ const Videos = () => {
 
     })    
   }, [])
+
+  function filter(category){
+    if(category=='all'){
+      setFilteredVideos(videos)
+    }
+    else{
+      var filteredVideos=[]
+      videos.map((t)=>{
+        if(t.category===category){
+          filteredVideos.push(t)
+        }
+      })
+      setFilteredVideos(filteredVideos)
+    }
+  }
   
- 
-
-   function find(items, text) {
-    text = text.split(' ');
-    return items.filter(item => {
-      return text.every(el => {
-        return item.includes(el);
-      });
-    });
-  }
-
-  function getList(name) {
-    var splitList = name.split(" ");
-
-  var indexList = [];
-
-for (var i = 0; i < splitList.length; i++) {
- for (var y = 1; y < splitList[i].length + 1; y++) {
-  indexList.push(splitList[i].substring(0, y).toLowerCase());
-}}
-
-return indexList
-  }
 
   return (
     <>
-     <div className='flex items-center justify-center'>
-     <div className='py-2 border-b border-gray-300 gap-2 bg-bg-secondary rounded-md p-2'>
-           
-            <input type="text" required value={searchText} placeholder ='' onChange={(e)=>{
-              setSearchText(e.target.value)
-            }} 
-            className="text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-500 text-textColor" />
-            
-            
-             <button
-             onClick={()=>{
-              
-              if(searchText==''){
-                setFilteredVideos(videos)
-              }
-              else{
-                var vds=[]
-                var v=[]
+      <div className="grid grid-cols-4 gap-3 p-4">
 
-              videos.forEach((video)=>{
-                var list=video.keywords.concat(getList(video.description))
-                v=find(list,searchText.toLowerCase())
-                if(v.length!=0){
-                  vds.push(video)
-                }
-              })
-              console.log(vds)
-              setFilteredVideos(vds)
-              }
-              
-             }}
-             >
-              
-            <MdSearch className='text-xl text-gray-700'/>
-            </button>
-          </div>
-     
-     </div>
+<button key='all' onClick={()=>filter('all')}  className='p-2 md:mx-8 lg:mx-20 text-lg bg-text-primary text-bg-primary font-extrabold rounded-lg bg-primary-700 hover:bg-text-secondary shadow-gray-600 shadow-md'>All</button>
+
+{categories.map((c)=>{
+return(
+
+<button key={c.urlParamName} onClick={()=>filter(c.urlParamName)}  className='p-2 md:mx-8 lg:mx-20 text-lg bg-text-primary text-bg-primary font-extrabold rounded-lg bg-primary-700 hover:bg-text-secondary shadow-gray-600 shadow-md'>{c.name}</button>
+
+
+)
+})}
+
+</div>
 
 
     {filteredVideos.length!=0?(

@@ -1,27 +1,35 @@
 import { motion } from 'framer-motion'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {MdFastfood,MdCloudUpload,MdDelete,MdMoney, MdAddBox, MdRemove, MdClear} from 'react-icons/md'
-import { videoCategories} from '../data'
+import { videoCategories,categories} from '../data'
 import Loader from './Loader'
-import {  uploadData } from '../utils/apiFunctions'
+import {  getCollectionData, uploadData } from '../utils/apiFunctions'
 import Image from 'next/image'
 
 
 const AddVideo = () => {
-  const [currentKeyword,setCurrentkeyword]=useState('')
 
 
-  const [description,setDescription]=useState('')
   const [videoURL,setVideoURL]=useState('')
 
-  const [keywords,setKeywords]=useState([])
   const [category,setCategory]=useState('Select Category')
-  
+  const [pkg,setPkg]=useState('Select Package')
+
   const [fields,setFields]=useState(false)
   const [alertStatus,setAlertStatus]=useState('dangper')
   const [msg,setMsg]=useState(null)
   const [isLoading,setIsLoading]=useState(false)
 
+  const [packages, setPackages] = useState([])
+
+  useEffect(() => {
+
+    getCollectionData('packages').then((val)=>{
+      setPackages(val)
+    })
+    
+  },)
+  
 
 
   const saveDetails=()=>{
@@ -33,7 +41,7 @@ const AddVideo = () => {
 
       
 
-      if(description==='' || keywords.length===0|| videoURL.length===0 || category==='Select Category'){
+      if(videoURL.length===0 || category==='Select Category'|| pkg==='Select Package'){
         setFields(true)
         setMsg("Required fields can't be empty")
         setAlertStatus('danger')
@@ -46,10 +54,9 @@ const AddVideo = () => {
       else{
         const data={
           id:`${category}-${Date.now()}`,
-          description:description,
           videoURL:videoURL,
-          keywords:keywords,
           category:category,
+          package:pkg,
           isFeatured:true
        
         }
@@ -86,10 +93,10 @@ const AddVideo = () => {
 
 
   const clearData=()=>{
-    setDescription('')
-    setKeywords([])
     setVideoURL('')
     setCategory('Select Category')
+    setCategory('Select Package')
+
   }
 
 
@@ -111,21 +118,10 @@ const AddVideo = () => {
             </motion.p>
           )}
 
-          <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
-            <MdFastfood className='text-xl text-gray-700'/>
-            <input type="text" required value={description} placeholder ='description' onChange={(e)=>{setDescription(e.target.value)}} 
-            className="w-full h-full text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-500 text-textColor" />
-          </div>
-          <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
-            <MdFastfood className='text-xl text-gray-700'/>
-            <input type="text" required value={videoURL} placeholder ='Video URL' onChange={(e)=>{setVideoURL(e.target.value)}} 
-            className="w-full h-full text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-500 text-textColor" />
-          </div>
-
-          <div className="w-full">
+      <div className="w-full">
             <select onChange={(e)=>{setCategory(e.target.value)}} className="outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer">
               <option value="other" className='bg-white'>Select Category</option>
-              {videoCategories&& videoCategories.map(item=>
+              {categories&& categories.map(item=>
                 (
                   <option key={item.id} className="text-base border-0 outline-none capitalize bg-white text-textColor" value={item.urlParamName}>{item.name}</option>
                 )
@@ -133,56 +129,27 @@ const AddVideo = () => {
             </select>
           </div>
 
-          
 
-
-                
-          
-
-
-          
-          <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
-            <MdMoney className='text-xl text-gray-700'/>
-            <input type="text" required value={currentKeyword} placeholder ='keywords' onChange={(e)=>{
-              setCurrentkeyword(e.target.value)
-              if(e.target.value.includes(',')){
-                console.log(e.target.value.substring(','))
-                var l=keywords
-                l.push(currentKeyword.split(',')[0])
-                setKeywords(l)
-                setCurrentkeyword('')
-              }
-            }} 
-            className="w-full h-full text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-500 text-textColor" />
-
-         
-
+          <div className="w-full">
+            <select onChange={(e)=>{setPkg(e.target.value)}} className="outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer">
+              <option value="other" className='bg-white'>Select Package</option>
+              {packages&& packages.map(item=>
+                (
+                  <option key={item.urlParamName} className="text-base border-0 outline-none capitalize bg-white text-textColor" value={item.urlParamName}>{item.title}</option>
+                )
+              )}
+            </select>
           </div>
-          
 
-              <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-6'>
+   
+          <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
+            <MdFastfood className='text-xl text-gray-700'/>
+            <input type="text" required value={videoURL} placeholder ='Video URL' onChange={(e)=>{setVideoURL(e.target.value)}} 
+            className="w-full h-full text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-500 text-textColor" />
+          </div>
 
-          {keywords&&keywords.map((keyword)=>{
 
-        return ( <div key={keyword} className="flex bg-gray-500 mx-4 p-2 my-2">
-             <p className='text-white'> {keyword}</p>
-             <button onClick={()=>{
-              var arr=keywords
-             arr = arr.filter(function(item) {
-                return item !== keyword
-            })
-            setKeywords(arr)
 
-             }}
-             >
-             <MdClear className='ml-2 text-gray-300'/>
-             </button>
-
-          </div>)
-
-              })}
-
-            </div>  
 
 
           
